@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<title>P5.js Example</title>
+	</head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+	<script>
+
+	function setup(){
+
+		createCanvas(1500, 800);
+		var car = 20;
+		var cloud = 20;
+    var cary = 400;
+	draw = function() {
+
+		background(135,206,235);
+		noStroke();
+
+		if (keyIsDown(LEFT_ARROW)) {
+    car -= 5;
+		cloud += 0.5;
+  }
+
+  if (keyIsDown(RIGHT_ARROW)) {
+    car += 8;
+		cloud -= 0.5;
+  }
+	if (keyIsDown(UP_ARROW)) {
+    cary -= 3;
+  }
+	if (keyIsDown(DOWN_ARROW)) {
+    cary += 3;
+  }
+	if  (car < 0){
+		car += 5;
+	}
+	if  (cary < 380){
+		cary +=  3;
+	}
+	if  (cary > 540){
+		cary -=  3;
+	}
+
+		// draws sun
+    fill(255, 165, 0);
+			ellipse(300,90,75,75);
+    // draws the cloud
+      fill(255,255,255);
+			ellipse(cloud,80	,80,80);
+			ellipse(cloud+50,80	,100,100);
+			ellipse(cloud+90,80	,80,80);
+			// second cloud
+			ellipse(cloud+500,80	,80,80);
+			ellipse(cloud+550,80,100,100);
+			ellipse(cloud+590 ,80	,80,80);
+      // third cloud
+			ellipse(cloud+900,80	,80,80);
+			ellipse(cloud+950,80	,100,100);
+			ellipse(cloud+990,80	,80,80);
+			//mountains
+			fill(150,75,0);
+			triangle(0, 376, 250	,150, 500, 376);
+			//2nd mountains
+      triangle(500, 376, 750,120, 1000, 376);
+			//3rd mountains
+			triangle(1000, 376, 1250,180, 1500, 376);
+		// draws the road;
+	 fill(150, 158, 153);
+	 rect( 0 ,376, 1500, 300);
+	  // draws the greens
+    fill(0,255,0);
+     rect( 0 ,600, 1500, 300);
+		 //--------------------------------------------------------------------------------------------------------------------------------
+		// draw the car body
+		fill(0,0,0);
+		rect(car + 15, cary, 200, 40,10);
+
+		rect(car + 30, cary-44, 140, 80,10);
+
+		// draw the wheels
+		fill(77, 66, 66);
+		ellipse(car + 50, cary+42, 48, 48);
+		ellipse(car + 150, cary+42, 48, 48);
+
+		// draw the wheel's rim
+		fill(128, 128, 128);
+		ellipse(car + 50, cary+42, 24, 24);
+		ellipse(car + 150, cary+42, 24, 24);
+
+		// draw the glasses
+		fill(255,255,255	);
+		rect(car + 50, cary-24, 40, 25);
+		rect(car + 110, cary-24, 40, 25);
+
+
+	}
+	}
+</script>
+	<body>
+
+
+	</body>
+</html>
