@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>World Environment Day</title>
+  </head>
+  <style>
+    body{
+      background-color:#03256c;
+      padding:30px;}
+    .wodtwo{
+      background-color: #2541b2;
+      height:1855px;
+      width: auto;
+
+      text-align:center;
+      font-size: 40px;
+       box-shadow: 20px 20px #1768ac ;
+       padding:40px;
+    }
+    h1{
+      color:#e5d549;
+      text-decoration:underline;
+      font-family: 'Odibee Sans', cursive;
+    }
+    p{
+    color: white;
+    }
+    #loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 220px;
+  height: 220px;
+  margin: -76px 0 0 -76px;
+  border: 26px solid blue;
+    border-radius: 50%;
+  border-top: 26px solid green;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+footer{
+  color:white;
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+p{
+  font-family: 'Ubuntu', sans-serif;
+}
+img{
+  height:300px;
+  width:300px;</style>
+  <body onload="myFunction()" style="margin:0;">
+    <div id="loader"></div>
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+
+     <div class="wodtwo">
+  <h1><strong>World Environment Day</strong></h1>
+  <h1><strong>2021</strong></h1>
+  <p>World Environment Day is celebrated every year on June 5 globally.
+    It is a day on which we spread awareness about the environment and the need to conserve it.
+    Moreover, it is essential to advocate for a greener environment and conservation of nature.
+    It is quite simple as when we conserve the environment today,
+    the future generations will be able to lead a healthier life.
+     We cannot be so selfish and use up all the resources for ourselves
+      . World Environment Day is the perfect opportunity to make people aware of the issues
+       we are facing and how one can contribute to saving it. Thus, it is quite important in its own way.
+      </p>
+     <img src="Earth.jpg" alt="Earth ">
+     <hr>
+    <p><br>-Abhinav.p</p>
+    <footer><hr/>
+    Thanks to gooogle images and w3schools</footer>
+    </div>
+    <script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+</div>
+  </body>
+</html>
